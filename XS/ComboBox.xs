@@ -153,6 +153,12 @@ void
 wxComboBox::Paste()
 
 void
+wxComboBox::Popup()
+
+void
+wxComboBox::Dismiss()
+
+void
 wxComboBox::Replace( from, to, text )
     long from
     long to
