@@ -83,6 +83,13 @@ wxTimer::Start( milliseconds = -1, oneshot = false )
     int milliseconds
     bool oneshot
 
+#if WXPERL_W_VERSION_GE( 2, 9, 5 )
+
+bool
+wxTimer::StartOnce( milliseconds = -1)
+    int milliseconds
+
+#endif
+
 void
 wxTimer::Stop()
-
