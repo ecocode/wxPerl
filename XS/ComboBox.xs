@@ -51,7 +51,7 @@ newFull( CLASS, parent, id = wxID_ANY, value = wxEmptyString, pos = wxDefaultPos
   CODE:
     if( choices != 0 )
         n = wxPli_av_2_stringarray( aTHX_ choices, &chs );
-    RETVAL = new wxComboBox( parent, id, value, pos, size, n, chs, 
+    RETVAL = new wxComboBox( parent, id, value, pos, size, n, chs,
         style, *validator, name );
     wxPli_create_evthandler( aTHX_ RETVAL, CLASS );
 
@@ -76,7 +76,7 @@ wxComboBox::Create( parent, id = wxID_ANY, value = wxEmptyString, pos = wxDefaul
   CODE:
     if( choices != 0 )
         n = wxPli_av_2_stringarray( aTHX_ choices, &chs );
-    RETVAL = THIS->Create( parent, id, value, pos, size, n, chs, 
+    RETVAL = THIS->Create( parent, id, value, pos, size, n, chs,
         style, *validator, name );
 
     delete[] chs;
@@ -105,10 +105,10 @@ wxComboBox::SetEditable( bool editable )
 
 #if WXPERL_W_VERSION_GE( 2, 9, 3 )
 
-bool 
+bool
 wxComboBox::IsListEmpty()
 
-bool 
+bool
 wxComboBox::IsTextEmpty()
 
 #endif
