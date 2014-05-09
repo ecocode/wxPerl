@@ -26,3 +26,6 @@ ext/*/*.c
 pm_to_blib
 wxt_*
 xspp
+MYMETA.json
+MYMETA.yml
+wxPerl
